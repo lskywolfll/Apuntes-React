@@ -49,7 +49,7 @@ Ejemplo de insertado de datos dentro de un componente;
 	ReactDOM.render(
 		<Titulo
 
-		Titulo="Estoy Vivo joder"
+		texto="Estoy Vivo joder"
 
 		/>,
 
