@@ -56,3 +56,56 @@ Ejemplo de insertado de datos dentro de un componente;
 		contenedorEtiquetaTitulo
 	)
 ~~~
+
+# Paginas
+
+La pagina es un componente que tiene otros componentes
+
+# Componente
+
+1. Siempre se debe importar el paquete react para poder crear el componente
+1. Creamos una clase con un nombre del cual como se llamara nuestro componente y este debe extenderse(heredar) del React.Component para poder usarlo como un componente en react.
+1. Al final tenemos que exportar nuestro componente osea el nombre de la clase que nosotros hemos creado
+
+~~~
+	import react from 'react';
+
+	class Titulo extends React.Component{
+		render(){
+			return (
+				<h1>Hello World!</h1>
+			)
+		}
+	}
+
+	export default Titulo;
+~~~
+
+# Pintar el componente
+
+Para pintar el componente nosotros necesitamos usar el paquete 'react-dom' para poder renderear en pantalla
+
+1- ReactDOM.render(__qué__,__donde__)
+
+ej:
+
+~~~
+	// JSX Necesita react y react-dom
+	import React from 'react';
+	import ReactDOM from 'react-dom';
+	import 'bootstrap/dist/css/bootstrap.css';
+	import './global.css'
+	// Componentes
+	import Badge from './components/Badge';
+	import BadgeNew from './pages/BadgeNew';
+	// JSX
+	// const jsx = <h1>Hello, Platzi Badges from React!</h1>;
+	// tipo elemento, atributos(props o propiertes),contenido
+	const element = React.createElement
+	     (
+	         'h1',
+	         // props(funcionalidades o caracteristicas como un objeto)
+	        { href: 'https://platzi.com' },
+	         'hola! Soy los hijos.'
+	    );
+~~~
