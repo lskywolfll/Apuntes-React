@@ -109,3 +109,55 @@ ej:
 	         'hola! Soy los hijos.'
 	    );
 ~~~
+
+
+# Manejo de Eventos cuando cambia un estado dentro del componente
+
+1. Ver lo que nosotros queremos queremos ver cuando se lance una accion por hacer algo, ya sea guardar o escribir tu nombre por un formulario o modal
+1. Obtener los valores mediante la persona interactue con nuestra pagina manejando el evento de cambios
+
+ej:
+
+~~~
+	class BadgeForm extends React.Component{
+
+    handleChange = e => {
+        console.log({
+        	//Obtener el nomber que se le asigno dentro del evento de cambios
+        	//EJ: nombre_input
+            name: e.target.name,
+            //Se obtiene el valor dentro de esa etiqueta controlando los cambios que ocurran dentro de este
+            value: e.target.value
+        });
+    };
+
+    render(){
+        return (
+            <div>
+                <h1>New Attendant</h1>
+
+                <form>
+                    <div className="form-group">
+                        <label>First Name</label>
+                        //En esta parte nosotros creamos un evento controlador de cambios
+                        <input onChange={this.handleChange} className="form-control" type="text" name="name_form"></input>
+                    </div>
+
+                    <button className="btn btn-primary">Save</button>
+                </form>
+            </div>
+        );
+    }
+}
+~~~
+
+
+Si tuvieramos que obtener el evento cuando alguien haga click en un boton que tengamos en nuestros componentes seria:
+
+~~~
+	handleClick = e => {
+		console.log("Se ha activado el evento click")
+	}
+
+	<button onClick={this.handleClick}></button>
+~~~
