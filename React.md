@@ -12,9 +12,27 @@ Pero tambien si queremos retornar una estructura fuera de un contenedor entones 
 	</React.Fragment>
 ~~~
 
+# Estilos
+
+Cuando nosotros queremos que un componente en react tenga estilos de css nosotros solamente debemos importarles sin hacer nada mas ya que react por defecto se encarga de montarlo en todo el componente en el cual nosotros añadimos estos estilos 🧐.
+
+~~~
+import style '../components/component_name/styles/estilo.css'
+~~~
+
+# Poner los estilos por clase
+
+~~~
+
+<div>
+	<h1 className="nombreDeTuClase">Hola Mundo!</h1>
+</div>
+
+~~~
+
 # Props
 
-Los props es una abreviacion de propierties en react, Podemos crear propiedaes(argumentos) dentro de nuestros componentes mediante cuando nosotros queramos renderizar el componente le pasaremos los valores de esas propiedades.
+Los props es una abreviacion de propierties en react, Podemos crear propiedaes(argumentos) dentro de nuestros componentes cuando nosotros queramos renderizar el componente le pasaremos los valores de esas propiedades.
 
 Se usan dentro del componente de esta manera: {this.props.name}
 
