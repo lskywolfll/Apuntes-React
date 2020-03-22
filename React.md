@@ -32,7 +32,7 @@ import style '../components/component_name/styles/estilo.css'
 
 # Props
 
-Los props es una abreviacion de propierties en react, Podemos crear propiedaes(argumentos) dentro de nuestros componentes cuando nosotros queramos renderizar el componente le pasaremos los valores de esas propiedades.
+Los props es una abreviacion de propierties en react, Podemos crear propiedaes(argumentos) dentro de nuestros componentes cuando nosotros queramos mandar datos para renderizar el componente con datos dinamicamente le pasaremos los valores de esas propiedades.
 
 Se usan dentro del componente de esta manera: {this.props.name}
 
