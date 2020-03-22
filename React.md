@@ -3,7 +3,7 @@
 
 Se tiene por obligacion con react con JSX establecer el estilo(html) que tendra cuyo componente debe estar lo que queremos devolver dentro de un contenedor.
 
-Pero tambien si queremos retornar una estructura fuera de un contenedor entones debes usar
+Pero tambien si queremos retornar una estructura fuera de un contenedor entonces debes usar
 
 ~~~
 	<React.Fragment>
