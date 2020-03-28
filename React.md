@@ -179,3 +179,41 @@ Si tuvieramos que obtener el evento cuando alguien haga click en un boton que te
 
 	<button onClick={this.handleClick}></button>
 ~~~
+
+# Ciclo de Vida
+
+## Montaje
+
+El artista que aparece en escena que tenemos en nuestros componentes.
+
+Cuando se monta suceden tres cosas:
+
+1. Constructor (Todos los estados que se necesitan)
+1. render (Cuando empiezes a crear cosas)
+1. componentDidMount (Cuando te vayas a mostrar)
+
+## Actualizacion
+
+Cuando el artista cambia de actitud y vestimentan en nuestros componentes.
+
+Cuando este va a hacerlo primero tiene que seguir estos pasos:
+
+1. render (Se pone la ropa sin color)
+1. componentDidUpdate (Estados Nuevos, Estados antiguos) (Este colorea la ropa y recuerda que colores tenia antess)
+
+## Desmontar
+
+Cuando el artista se retira de nuestros escenarios 😿 y tenemos que dejar todo limpio para la proxima escena.
+
+Por lo cual lo que debemos hacer es lo siguiente:
+
+1. componentWillUnmount (Dejamos todo como nuevo y sacamos todo lo usado sillas, limpiamos el piso, retiramos cortinas y telones, apagamos las luces)
+
+# LLamadas a una api
+
+Cuando nosotros vamos a obtener informacion tendremos 3 estados:
+
+1. Loading (Se envia la peticion y se espera)
+1. Error (Respuesta de la api indicando un error)
+1. Datos (Respuesta de la api que pudo enviarnos bien el dato y puede estar vacio por que aun no tiene datos)
+
