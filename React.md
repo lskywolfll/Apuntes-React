@@ -217,3 +217,62 @@ Cuando nosotros vamos a obtener informacion tendremos 3 estados:
 1. Error (Respuesta de la api indicando un error)
 1. Datos (Respuesta de la api que pudo enviarnos bien el dato y puede estar vacio por que aun no tiene datos)
 
+# Hooks
+
+Permite a los componentes funcionales tener caracteristicas que solo las clases tienen:
+
+1- Manejo de los estados
+2- Control de un ciclo de vida
+3- Ejecutar acciones
+
+## Manejo de estados
+
+Nosotros usarios en este punto dentro de nuestros componentes funcionales el metodo:
+
+useState
+//para manejar los estados dentro del componente funcional
+
+## Manejo de un ciclo de vida
+
+Para el manejo de los ciclos de vida usariamos:
+
+useEffect
+
+Para suscribir el componente a su ciclo de vida, osea podemos estar pendientes del efecto de uno para cuando desaparesca de escena hagamos algo.
+
+## Ejecutar acciones
+
+useReducer
+
+Este ejecutara todas las acciones que nos vengan como props.
+
+Tambien nosotros podemos crear nuestros propios hooks para agregarle superpoderes a nuestros componentes funcionales!
+
+# Reglas para Custom Hooks
+
+1. Usamos los hooks fundamentales apra crear nuevos hooks custom, estos hooks iran en su propia funcion y su nombre comenzara con la palabra 'use'.
+
+2. un hook jamas lo podemos ejecutar condicionalmente
+
+La ventaja de usar los personalizados por nosotros que podemos añadirle logica para que haga una serie de cosas y validar si queremos como una suma de un conteo por ejemplo:
+
+~~~
+function useIncreaseCount(max){
+	//useState siempre nos devuelve un array por eso lo usamos y le agregamos un valor por defecto dentro de los parentesis en este caso es 0 para la variable count
+	
+	// Es como decir:
+
+    // const [state, setState] que mayormente usamos con regularidad en componentes de clase :o
+
+    // Por lo cual este funciona como crear variable y crear funcion para setearle valor cosa que nosotros haremos la logica despues que sera el encargado de hacer algo
+
+	const [count, setCount] = React.useState(0);
+
+	if(count > max){
+		setCount(0);
+	}
+
+	return [count, setCount]
+}
+~~~
+
